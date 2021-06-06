@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         healthbar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();//获取heatthBar下面的组件中的这个方法
         healthBarScale = healthbar.transform.localScale;//找到本地的scale
         anim = GetComponent<Animator>();
-        lastHurt = Time.time;//当前游戏时间
+        
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -35,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 TakeDamage(collision.gameObject.transform);//减血
                 //更新血条状态
+                lastHurt = Time.time;//当前游戏时间
             }
             else
             if(health<=0)//血量小于等于0的判断

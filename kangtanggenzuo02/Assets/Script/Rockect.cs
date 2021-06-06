@@ -22,7 +22,10 @@ public class Rockect : MonoBehaviour
             Destroy(gameObject);//销毁炮弹
             //Debug.Log(collision.name);
         }
-      
+      if(collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().Hurt();
+        }
     }
     void Update()
     {

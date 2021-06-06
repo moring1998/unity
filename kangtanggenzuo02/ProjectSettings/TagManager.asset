@@ -6,6 +6,8 @@ TagManager:
   tags:
   - body
   - Enemy
+  - wall
+  - HealthBar
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Ground
   - Player
   - Confiner
-  - 
+  - Enemy
   - 
   - 
   - 
